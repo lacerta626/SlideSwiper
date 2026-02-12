@@ -1,0 +1,10 @@
+@import url(font.css);
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Pretendard', sans-serif; font-size: 16px; color:#333; }
+li { list-style: none; }
+img, input { vertical-align: middle; }
+a { text-decoration: none; }
+
+.inner{width: 1320px;margin: 0 auto;}

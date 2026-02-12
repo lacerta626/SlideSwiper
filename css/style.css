@@ -1,0 +1,52 @@
+/* ============================================================
+   공통 레이아웃 (Layout Common)
+============================================================ */
+section { padding: 100px 0; }
+h1 { text-align: center; font-size: 64px; font-weight: 200; margin-bottom: 30px; }
+.swiper-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ============================================================
+   SECTION 1 & 2: 기본 & 커스텀 (Standard Styles)
+============================================================ */
+.s1 { background-color: #efc; }
+.slide_1, .slide_2 { position: relative; overflow: hidden; }
+.s2 { --swiper-theme-color: #ff0000; } /* 섹션2만 포인트 컬러 빨강 */
+
+/* ============================================================
+   SECTION 3: 입체 회전 (Coverflow Styles)
+============================================================ */
+.s3 { background: #f9f9f9; overflow: hidden; }
+.swiper3 { width: 100%; padding: 50px 0 100px; }
+.swiper3 .swiper-slide { width: 500px; height: 350px; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); }
+.swiper3 .swiper-pagination-bullet-active { width: 20px; border-radius: 5px; background: #333; }
+
+/* ============================================================
+   SECTION 4: 역동적 이동 (Creative Styles)
+============================================================ */
+.swiper4 .swiper-slide { width: 500px; height: 350px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+
+/* ============================================================
+   SECTION 5: 카드 뭉치 (Cards Styles)
+============================================================ */
+.swiper5 { width: 320px; height: 450px; margin: 0 auto; } /* 카드는 컨테이너 크기 고정이 예쁨 */
+.swiper5 .swiper-slide { border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); background: #fff; }
+
+.swiper5-1 { width: 800px;margin: 0 auto; } /* 카드는 컨테이너 크기 고정이 예쁨 */
+.swiper5 .swiper-slide { border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); background: #fff; }
+
+/* ============================================================
+   SECTION 6: 페이드 효과 (Fade Styles)
+============================================================ */
+.swiper6 { max-width: 800px; margin: 0 auto; }
+.swiper6 .swiper-slide { height: 450px; border-radius: 10px; overflow: hidden; }
+
+/* ============================================================
+   반응형 조절 (Responsive)
+============================================================ */
+@media (max-width: 1024px) {
+    .swiper3 .swiper-slide, .swiper4 .swiper-slide { width: 400px; height: 300px; }
+}
+@media (max-width: 768px) {
+    .swiper3 .swiper-slide, .swiper4 .swiper-slide { width: 280px; height: 200px; }
+    h1 { font-size: 40px; }
+}
