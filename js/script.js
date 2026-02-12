@@ -134,4 +134,67 @@ $(document).ready(function () {
         slidesPerView: 1,
     });
 
+
+
+    /* SECTION 7: Cube */
+    const swiperCube = new Swiper('.s7 .swiper-cube', {
+        effect: 'cube',
+        grabCursor: true,
+        cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+        },
+        autoplay: { delay: 3000 },
+        pagination: { el: '.s7 .swiper-pagination' } // 구체적 선택자
+    });
+
+    /* SECTION 8: Flip */
+    const swiperFlip = new Swiper('.s8 .swiper-flip', {
+        effect: 'flip',
+        grabCursor: true,
+        flipEffect: {
+            slideShadows: true,
+            limitRotation: true
+        },
+        pagination: { el: '.s8 .swiper-pagination' }
+    });
+
+    /* SECTION 9: Panorama (Coverflow Custom) */
+    const swiperPanorama = new Swiper('.s9 .swiper-panorama', {
+        effect: 'coverflow',
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop: true,
+        coverflowEffect: {
+            rotate: -30,
+            stretch: -60,
+            depth: 400,
+            modifier: 1,
+            slideShadows: false,
+        },
+        pagination: { el: '.s9 .swiper-pagination' }
+    });
+
+    /* SECTION 10: Slide Over */
+    const swiperOver = new Swiper('.s10 .swiper-over', {
+        speed: 1000,
+        watchSlidesProgress: true,
+        pagination: { el: '.s10 .swiper-pagination' },
+        on: {
+            setTranslate(swiper) { // 최신 버전에서는 매개변수 swiper만 전달해도 충분합니다
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    const slide = swiper.slides[i];
+                    const progress = slide.progress;
+                    slide.style.transform = `translateX(${progress * 50}%)`;
+                }
+            },
+            setTransition(swiper, transition) {
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = `${transition}ms`;
+                }
+            },
+        },
+    });
 });
